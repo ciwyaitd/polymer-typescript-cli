@@ -3,21 +3,37 @@
   "version": "0.0.1",
   "description": "A cli tool for polymer 3.0 and support typescript",
   "main": "index.js",
-  "bin": "bin/cli.js",
-  "repository": {},
+  "bin": {
+    "polymer-ts": "bin/cli.js"
+  },
+  "repository": "git@github.com:ciwyaitd/polymer-typescript-cli.git",
   "engines": {
     "node": ">= 8"
   },
   "author": "ciwyaitd",
-  "license": "MIT",
   "keywords": [
     "polymer",
     "web component",
-    "typescript",
-    "webcomponent"
+    "webcomponent",
+    "typescript"
   ],
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
+    "build": "webpack --config ./build/webpack.prod.conf.js",
+    "cli": "ts-node --project ./devTools/tsconfig.json ./devTools/cli.ts"
+  },
   "devDependencies": {
-    "chalk": "^2.4.1",
-    "commander": "^2.19.0"
+    "async": "^2.6.2",
+    "chalk": "^2.4.2",
+    "commander": "^2.19.0",
+    "consolidate": "^0.15.1",
+    "handlebars": "^4.1.0",
+    "inquirer": "^6.2.2",
+    "metalsmith": "^2.3.0",
+    "minimatch": "^3.0.4",
+    "multimatch": "^3.0.0",
+    "read-metadata": "^1.0.0",
+    "validate-npm-package-name": "^3.0.0"
   }
 }

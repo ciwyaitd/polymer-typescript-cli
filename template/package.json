@@ -1,0 +1,59 @@
+{
+    "name": "polymer-typescript-cli",
+    "version": "0.0.1",
+    "description": "A cli tool for polymer 3.0 and support typescript",
+    "main": "index.js",
+    "bin": {
+      "polymer-ts": "bin/cli.js"
+    },
+    "repository": "git@github.com:ciwyaitd/polymer-typescript-cli.git",
+    "engines": {
+      "node": ">= 8"
+    },
+    "author": "ciwyaitd",
+    "keywords": [
+      "polymer",
+      "web component",
+      "webcomponent",
+      "typescript"
+    ],
+    "license": "MIT",
+    "scripts": {
+      "start": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
+      "build": "webpack --config ./build/webpack.prod.conf.js",
+      "cli": "ts-node --project ./devTools/tsconfig.json ./devTools/cli.ts"
+    },
+    "dependencies": {},
+    "devDependencies": {
+      "@polymer/decorators": "^3.0.0",
+      "@polymer/polymer": "^3.1.0",
+      "@types/node": "^10.12.18",
+      "@webcomponents/webcomponentsjs": "^2.2.1",
+      "babel-core": "^6.26.3",
+      "babel-loader": "^8.0.4",
+      "babel-plugin-transform-es2015-parameters": "^6.24.1",
+      "babel-plugin-transform-runtime": "^6.23.0",
+      "babel-preset-es2015": "^6.24.1",
+      "babel-preset-stage-0": "^6.24.1",
+      "babel-runtime": "^6.26.0",
+      "clean-webpack-plugin": "^1.0.0",
+      "colors": "^1.3.3",
+      "copy-webpack-plugin": "^4.6.0",
+      "fork-ts-checker-webpack-plugin": "^0.5.2",
+      "fs-extra": "^7.0.1",
+      "html-loader": "^0.5.5",
+      "html-webpack-plugin": "^3.2.0",
+      "inquirer": "^6.2.1",
+      "ts-loader": "^5.3.2",
+      "ts-node": "^7.0.1",
+      "tslint": "^5.12.0",
+      "tslint-loader": "^3.5.4",
+      "typescript": "^3.2.2",
+      "uglifyjs-webpack-plugin": "^2.1.1",
+      "webpack": "^4.28.3",
+      "webpack-cli": "^3.1.2",
+      "webpack-dev-server": "^3.1.14",
+      "webpack-merge": "^4.1.5",
+      "yargs": "^12.0.5"
+    }
+  }
