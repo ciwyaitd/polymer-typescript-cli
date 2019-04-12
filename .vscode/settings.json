@@ -1,0 +1,13 @@
+{
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+    "prettier.stylelintIntegration": true,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "html.format.wrapAttributes": "force-aligned",
+    "editor.formatOnSave": true
+}

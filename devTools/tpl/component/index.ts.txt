@@ -1,0 +1,25 @@
+/**
+ * ${ComponentName}
+ * @author ${username}
+ * @date ${curDate}
+ * @since ${version}
+ */
+
+'use strict'
+
+import { PolymerElement } from '@polymer/polymer'
+import { customElement, property } from '@polymer/decorators'
+import html from 'utils/html'
+import view from './template.html'
+
+@customElement('${componentName}')
+export default class ${ComponentName} extends PolymerElement {
+    constructor() {
+        super()
+    }
+
+    static get template() {
+        return html(view)
+    }
+}
+
