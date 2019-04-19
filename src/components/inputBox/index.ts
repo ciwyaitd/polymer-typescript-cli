@@ -11,6 +11,7 @@ import { PolymerElement } from '@polymer/polymer'
 import { customElement, property, computed } from '@polymer/decorators'
 import html from 'utils/html'
 import view from './template.html'
+import store from 'store'
 
 @customElement('input-box')
 export default class InputBox extends PolymerElement {

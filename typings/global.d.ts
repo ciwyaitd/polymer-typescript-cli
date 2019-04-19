@@ -24,6 +24,6 @@ declare module 'polymer-redux' {
     export default function PolymerRedux<S>(store: Store): PolymerRedux<S>
 }
 
-interface Window {
-    Polymer: any
+interface Function {
+    is?: string
 }

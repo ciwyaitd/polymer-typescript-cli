@@ -27,6 +27,11 @@ export default class ToDoMvc extends store(PolymerElement) {
     @property({ type: Array, statePath: 'todos' })
     private todos
 
+    private addTodo() {
+        console.dir(this)
+        console.log('todo')
+    }
+
     static get template() {
         return html(view)
     }

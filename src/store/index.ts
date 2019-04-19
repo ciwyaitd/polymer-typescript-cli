@@ -1,5 +1,5 @@
 import { createStore, combineReducers } from 'redux'
-import PolymerRedux from 'polymer-redux'
+import PolymerRedux from './polymer-redux'
 import todos from './reducer'
 import storage from 'lib/localStorage'
 
