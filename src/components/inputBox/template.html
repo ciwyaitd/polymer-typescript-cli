@@ -1,6 +1,6 @@
 <div class="new-input">
     <template is="dom-if"
-              if="{{ showToggleButton() }}">
+              if="[[ showToggleButton ]]">
         <input class="toggle-all"
                type="checkbox"
                on-change="toggleStatus"
@@ -10,6 +10,7 @@
            class="new-todo"
            placeholder="What needs to be done?"
            autofocus
+           on-keydown="KeydownHandler"
            value="{{ text::input }}" />
 </div>
 <style include="reset">

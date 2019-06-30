@@ -1,8 +1,3 @@
-declare module '@polymer/polymer/polymer-element' {
-    import { PolymerInit } from '@polymer/polymer/interfaces.d'
-    export class PolymerElement extends HTMLElement {}
-}
-
 declare module '*.html' {
     const template: string
     export default template

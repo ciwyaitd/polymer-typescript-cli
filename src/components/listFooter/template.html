@@ -1,9 +1,16 @@
 <div class="list-footer">
-    <span class="todo-count">items left</span>
+    <span class="todo-count">[[ itemsLeft ]] items left</span>
     <div class="filters">
-        <a href="#"></a>
+        <template is="dom-repeat"
+                  items="[[ filters ]]">
+            <a href="#"
+               class$="[[ isSelected(item) ]]"
+               data-filter$="[[ item ]]"
+               on-click="setFilter">[[ item ]]</a>
+        </template>
     </div>
     <a href="#"
+       on-click="clearCompleted"
        class="clear-completed">Clear completed</a>
 </div>
 <style include="reset">

@@ -32,6 +32,12 @@ export default handleActions<Todos, Todo>(
                 ...state
             ]
         },
+        [ActionsTypes.DELETE_TODO]: (
+            state: Todos,
+            action: Action<Todo>
+        ): Todos => {
+            return state.filter(v => v.id !== action.payload.id)
+        },
         [ActionsTypes.EDIT_TODO]: (
             state: Todos,
             action: Action<Todo>

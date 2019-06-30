@@ -19,7 +19,7 @@ export default function () {
         console.error(error)
     }
 
-    name = name && JSON.stringify(String(name).trim().slice(1, -1))
+    name = name && JSON.stringify(String(name).trim())
     email = email && ' <' + String(email).trim() +'>'
 
     return (name || '') + (email || '')

@@ -1,14 +1,25 @@
-<div>
-    <input type="checkbox"
-           class="toggle">
-    <label></label>
-    <input type="text">
-    <a on-click=""
-       class="destroy"></a>
+<div class$="[[ className ]]">
+    <div class="view">
+        <input type="checkbox"
+               on-change="toggle"
+               checked="[[ item.completed ]]"
+               class="toggle">
+        <label on-dblclick="dbclickHandler">[[item.title]]</label>
+        <a on-click="delete"
+           class="destroy"></a>
+    </div>
+    <input type="text"
+           class="edit"
+           id="list-item-input"
+           on-blur="blurHandler"
+           value="{{ text::input }}"
+           on-keydown="keydownHandler"
+           on-blur="blurHandler">
 </div>
 <style include="reset">
     :host {
         position: relative;
+        display: block;
         font-size: 24px;
         border-bottom: 1px solid #ededed;
     }
@@ -60,6 +71,10 @@
         text-decoration: line-through;
     }
 
+    .view:hover .destroy {
+        display: block;
+    }
+
     .destroy {
         display: none;
         position: absolute;
@@ -89,6 +104,7 @@
         border: none;
         /* Mobile Safari */
         appearance: none;
+        -webkit-appearance: none;
         background: none;
         cursor: pointer;
 

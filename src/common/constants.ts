@@ -11,3 +11,9 @@ export const ActionsTypes = {
     TOGGLE_ALL_TODO: 'TOGGLE_ALL_TODO',
     CLEAR_COMPLETED: 'CLEAR_COMPLETED'
 }
+
+export const TodosFilter = {
+    All: 'All',
+    Active: 'Active',
+    Completed: 'Completed'
+}

@@ -7,46 +7,48 @@
 
 'use strict'
 
-import { PolymerElement } from '@polymer/polymer'
+import { PolymerElement } from '@polymer/polymer/polymer-element'
 import { customElement, property, computed } from '@polymer/decorators'
 import html from 'utils/html'
 import view from './template.html'
 import store from 'store'
+import { toggleAllTodo } from 'store/actions'
 
 @customElement('input-box')
-export default class InputBox extends PolymerElement {
-    // public store = todoStore
-
+export default class InputBox extends store(PolymerElement) {
     constructor() {
         super()
     }
 
-    // @property({ type: String })
-    // private text = ''
+    @property({ type: String })
+    private text = ''
 
-    // @computed('store')
-    // public get status() {
-    //     return this.store.allStatus
-    // }
+    private toggleStatus(e: HTMLElementEventMap['change']) {
+        this.dispatch(toggleAllTodo())
+    }
 
-    // @computed('store')
-    // public get todos() {
-    //     return this.store.todos
-    // }
+    @property({ type: Array, statePath: 'todos' })
+    public todos
 
-    // private toggleStatus(e: HTMLElementEventMap['change']) {
-    //     this.store.toggleAllStatus((e.target as HTMLInputElement).checked)
-    // }
+    @computed('todos')
+    public get showToggleButton() {
+        return this.todos && this.todos.length > 0
+    }
 
-    // private showToggleButton() {
-    //     return this.todos.length > 0
-    // }
-
-    // private keyDown(e: HTMLElementEventMap['keydown']) {
-    //     if (e.keyCode !== 13) return
-    //     this.store.addTodos(this.text)
-    //     this.text = ''
-    // }
+    private KeydownHandler(e: KeyboardEvent) {
+        if (e.keyCode !== 13) return
+        if (!this.text) return
+        this.dispatchEvent(
+            new CustomEvent('add-todo', {
+                bubbles: true,
+                composed: true,
+                detail: {
+                    value: this.text
+                }
+            })
+        )
+        this.text = ''
+    }
 
     static get template() {
         return html(view)

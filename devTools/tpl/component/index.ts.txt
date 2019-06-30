@@ -7,7 +7,7 @@
 
 'use strict'
 
-import { PolymerElement } from '@polymer/polymer'
+import { PolymerElement } from '@polymer/polymer/polymer-element'
 import { customElement, property } from '@polymer/decorators'
 import html from 'utils/html'
 import view from './template.html'

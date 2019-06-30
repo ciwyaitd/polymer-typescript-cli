@@ -9,5 +9,6 @@
         "editor.defaultFormatter": "vscode.html-language-features"
     },
     "html.format.wrapAttributes": "force-aligned",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "typescript.tsdk": "node_modules/typescript/lib"
 }

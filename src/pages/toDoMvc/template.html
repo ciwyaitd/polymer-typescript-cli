@@ -1,15 +1,16 @@
-<div class="todomvc">
+<div class="todomvc"
+     id="todomvc">
     <div class="todomvc-box">
         <div class="todoapp">
             <header class="header">
                 <h1>todos</h1>
             </header>
-            <input-box on-keydown="addTodo"></input-box>
+            <input-box></input-box>
             <div class="main">
                 <div class="todo-list">
                     <template is="dom-repeat"
-                              items="[[ todos ]]">
-                        <list-item></list-item>
+                              items="[[ todosByFilter ]]">
+                        <list-item item="[[ item ]]"></list-item>
                     </template>
                 </div>
                 <list-footer></list-footer>
