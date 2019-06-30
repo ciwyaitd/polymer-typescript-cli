@@ -1,0 +1,108 @@
+<div class="list-footer">
+    <span class="todo-count">[[ itemsLeft ]] items left</span>
+    <div class="filters">
+        <template is="dom-repeat"
+                  items="[[ filters ]]">
+            <a href="#"
+               class$="[[ isSelected(item) ]]"
+               data-filter$="[[ item ]]"
+               on-click="setFilter">[[ item ]]</a>
+        </template>
+    </div>
+    <a href="#"
+       on-click="clearCompleted"
+       class="clear-completed">Clear completed</a>
+</div>
+<style include="reset">
+    :host {
+        display: block;
+    }
+
+    .list-footer {
+        position: relative;
+        height: 40px;
+        padding: 10px 15px;
+        border-top: 1px solid #e6e6e6;
+        text-align: center;
+        color: #777;
+
+    }
+
+    .list-footer::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 50px;
+        overflow: hidden;
+        box-shadow:
+            0 1px 1px rgba(0, 0, 0, 0.2),
+            0 8px 0 -3px #f6f6f6,
+            0 9px 1px -3px rgba(0, 0, 0, 0.2),
+            0 16px 0 -6px #f6f6f6,
+            0 17px 2px -6px rgba(0, 0, 0, 0.2);
+    }
+
+    .clear-completed,
+    .clear-completed:active {
+        float: right;
+        position: relative;
+        line-height: 20px;
+        text-decoration: none;
+        cursor: pointer;
+
+    }
+
+    .clear-completed:active:hover,
+    .clear-completed:hover {
+        text-decoration: underline;
+    }
+
+    .todo-count {
+        float: left;
+        text-align: left;
+
+    }
+
+    .todo-count strong {
+        font-weight: 300;
+    }
+
+    .filters {
+        position: absolute;
+        top: 12px;
+        right: 0;
+        left: 0;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .filters li {
+        display: inline;
+    }
+
+    .filters a {
+        padding: 3px 7px;
+        margin: 3px;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        color: inherit;
+        text-decoration: none;
+
+    }
+
+    .filters a::first-letter {
+        color: #000;
+        text-transform: uppercase;
+    }
+
+    .filters a:hover {
+        border-color: rgba(175, 47, 47, 0.1);
+    }
+
+    .filters a.selected {
+        border-color: rgba(175, 47, 47, 0.2);
+    }
+</style>

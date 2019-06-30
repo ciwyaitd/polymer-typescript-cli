@@ -1,0 +1,6 @@
+<div>
+    <h1>${ComponentName}</h1>
+</div>
+<style>
+
+</style>

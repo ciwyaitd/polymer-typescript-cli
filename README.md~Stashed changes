@@ -1,9 +1,0 @@
-# polymer-typescript-cli
-
-babel-plugin-transform-es2015-parameters babel-plugin-transform-runtime babel-preset-es2015 babel-preset-stage-0
-
-babel-runtime clean-webpack-plugin copy-webpack-plugin
-
-ts-loader colors fork-ts-checker-webpack-plugin fs-extra html-loader html-webpack-plugin inquirer ts-node tslint tslint-loader typescript
-
-uglifyjs-webpack-plugin webpack webpack-cli webpack-dev-server webpack-merge yargs
