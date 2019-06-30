@@ -1,6 +1,0 @@
-<dom-module id="${componentName}">
-    <template>
-        <style>
-        </style>
-    </template>
-</dom-module>
