@@ -1,6 +1,6 @@
 {
   "name": "polymer-typescript-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A cli tool for polymer 3.0 and support typescript",
   "main": "index.js",
   "bin": {
