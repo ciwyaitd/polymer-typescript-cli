@@ -4,12 +4,13 @@
   "description": "A cli tool for polymer 3.0 and support typescript",
   "main": "index.js",
   "bin": {
-    "polymer-ts": "bin/cli.js"
+    "polymer-ts-cli": "./bin/cli.js"
   },
   "repository": "git@github.com:ciwyaitd/polymer-typescript-cli.git",
   "engines": {
     "node": ">= 8"
   },
+  "preferGlobal": true,
   "author": "ciwyaitd",
   "keywords": [
     "polymer",
