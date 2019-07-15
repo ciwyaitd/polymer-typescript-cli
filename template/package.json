@@ -11,7 +11,6 @@
         "build": "webpack --config ./build/webpack.prod.conf.js",
         "cli": "ts-node --project ./devTools/tsconfig.json ./devTools/cli.ts"
     },
-    "dependencies": {},
     "devDependencies": {
         "@polymer/decorators": "^3.0.0",
         "@polymer/polymer": "^3.2.0",
