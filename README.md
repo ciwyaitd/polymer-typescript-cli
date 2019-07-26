@@ -6,7 +6,7 @@
 
 ```bash
 $ yarn global add polymer-typescript-cli
-$ polymer-ts-cli project-name
+$ polymer-ts-cli create project-name
 $ cd project-name
 $ yarn dev
 ```

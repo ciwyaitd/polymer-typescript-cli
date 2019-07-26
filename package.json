@@ -1,6 +1,6 @@
 {
   "name": "polymer-typescript-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A cli tool for polymer 3.0 and support typescript",
   "main": "index.js",
   "bin": {
@@ -24,7 +24,7 @@
     "build": "webpack --config ./build/webpack.prod.conf.js",
     "cli": "ts-node --project ./devTools/tsconfig.json ./devTools/cli.ts"
   },
-  "devDependencies": {
+  "dependencies": {
     "async": "^2.6.2",
     "chalk": "^2.4.2",
     "commander": "^2.19.0",
